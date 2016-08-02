@@ -2,20 +2,12 @@
 
 module HelperMethods
 
-  def capitalize
-    array = str.split
+  def capitalized(title)
+    array = title.split
     array.each { |word| word.capitalize! }
-    puts array.join(" ").gsub("The", "the").gsub("In", "in").gsub("Of", "of").gsub("And", "and").gsub("Or", "or").gsub("From", "from")
+    array.join(" ").gsub("The", "the").gsub("In", "in").gsub("Of", "of").gsub("And", "and").gsub("Or", "or").gsub("From", "from")
   end
-
 end
 
-class Title
-  attr_accessor :str
-
-  include HelperMethods
-end
-
-newTitle = Title.new
-newTitle.str = "hello The In From Of And Or world"
-puts newTitle.capitalize
+include HelperMethods
+p capitalized("hello The In From Of And Or world")
