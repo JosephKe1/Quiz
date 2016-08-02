@@ -4,7 +4,5 @@ var majorCities = {BC: ["Vancouver", "Victoria", "Prince George"], AB: ["Edmonto
 // Write a piece of code that loops through the object and prints the following to the console: BC has 3 main cities AB has 2 main cities
 
 for (var province in majorCities) {
-  if (majorCities.hasOwnProperty(province)) {
     console.log(province + " has " + majorCities[province].length + " main cities.");
-  }
 }
